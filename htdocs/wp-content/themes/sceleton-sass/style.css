@@ -1,0 +1,410 @@
+@charset "UTF-8";
+/*   
+Theme Name: The Sceleton theme
+Theme URI: http://tigerton.se
+Description: "bony framework of the body", a theme for quick and modern development!
+Author: Jonathan de Jong @ Tigerton 
+Author URI: http://tigerton.se
+Version: 2
+*/
+/* CSS Reset based on HTML5Doctors
+-------------------------------------------------------------------------------*/
+/* line 3, sass/reset.scss */
+*, :after, :before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 3, sass/reset.scss */
+html {
+  overflow-y: scroll; }
+
+/* line 3, sass/reset.scss */
+abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0; }
+
+/* line 3, sass/reset.scss */
+body {
+  line-height: 1;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -o-text-size-adjust: none; }
+
+/* line 3, sass/reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 3, sass/reset.scss */
+nav ul {
+  list-style: none; }
+
+/* line 3, sass/reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 3, sass/reset.scss */
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none; }
+
+/* line 3, sass/reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0; }
+
+/* line 3, sass/reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* line 3, sass/reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: 700; }
+
+/* line 3, sass/reset.scss */
+del {
+  text-decoration: line-through; }
+
+/* line 3, sass/reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+/* line 3, sass/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 3, sass/reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/* line 3, sass/reset.scss */
+input, select {
+  vertical-align: middle; }
+
+/* line 3, sass/reset.scss */
+embed, img, object {
+  max-width: 100%; }
+
+/* line 3, sass/reset.scss */
+button, input[type=email], input[type=tel], input[type=text], select, textarea {
+  -webkit-appearance: none; }
+
+/* WordPress specific*/
+/* line 5, sass/reset.scss */
+.comment-content img[height], .entry-content img, .entry-summary img, img[class*=align], img[class*=attachment-], img[class*=wp-image-] {
+  height: auto; }
+
+/* line 5, sass/reset.scss */
+.post-thumbnail img, .wp-post-image, img.size-full, img.size-large {
+  height: auto;
+  max-width: 100%; }
+
+/* line 5, sass/reset.scss */
+.alignleft, .left {
+  float: left; }
+
+/* line 5, sass/reset.scss */
+.alignright, .right {
+  float: right; }
+
+/* line 5, sass/reset.scss */
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* let's clear some floats */
+/* line 7, sass/reset.scss */
+.clearfix:after, .clearfix:before {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+/* line 7, sass/reset.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 7, sass/reset.scss */
+.clearfix {
+  zoom: 1; }
+
+/* accessability */
+/* line 9, sass/reset.scss */
+.screen-reader-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+/* link tap and selection */
+/* line 11, sass/reset.scss */
+::-moz-selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none; }
+
+/* line 11, sass/reset.scss */
+::selection {
+  background: #fcd700;
+  color: #fff;
+  text-shadow: none; }
+
+/* line 11, sass/reset.scss */
+a:link {
+  -webkit-tap-highlight-color: #fcd700; }
+
+/*
+  Choose a grid width, the number of columns and the margin between columns.
+  The result of the following equation has to be an integer, not a fraction:
+  
+  (width - (columns - 1) * col_margin) / columns = N
+*/
+/* total with of page */
+/* number of columns */
+/* margin between columns */
+/* math magic */
+/* create row div */
+/* create a column div */
+/* make an element span n columns */
+/* the last column in a row needs this */
+/* prepend n blank columns  */
+/* append n blank columns */
+/* Mixins – SASS
+-------------------------------------------------------------------------------*/
+/* Variables – SASS
+-------------------------------------------------------------------------------*/
+/* And here begins the Wordpress fun.
+-------------------------------------------------------------------------------*/
+/*
+* GENERIC STYLES
+*/
+/* line 49, sass/style.scss */
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333333; }
+
+/* 
+* TYPOGRAPHY 
+*/
+/* line 2, sass/typography.scss */
+a {
+  font-size: 0.8125em;
+  color: #333333;
+  text-decoration: none; }
+
+/* line 7, sass/typography.scss */
+p {
+  font-size: 0.8125em;
+  line-height: 1.625em;
+  margin-bottom: 1em; }
+
+/* line 12, sass/typography.scss */
+h1 {
+  font-size: 1.875em;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0px 0px 25px 0px; }
+
+/* line 18, sass/typography.scss */
+h2 {
+  font-size: 1.875em;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0px 0px 20px 0px; }
+
+/* line 24, sass/typography.scss */
+h3 {
+  font-size: 1.5em;
+  font-weight: normal; }
+
+/* line 28, sass/typography.scss */
+h4 {
+  font-size: 1.125em;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0px 0px 15px 0px; }
+
+/* line 34, sass/typography.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a, label a, blockquote a, small a, li a, q a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: inherit; }
+
+/*
+* GENERAL
+*/
+/* line 61, sass/style.scss */
+.page-wrap {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 10px; }
+
+/* 
+* HEADER 
+*/
+/* line 79, sass/style.scss */
+#logo-wrap {
+  float: left; }
+  /* line 81, sass/style.scss */
+  #logo-wrap #logo {
+    display: block; }
+
+/* Main menu */
+/* line 87, sass/style.scss */
+#mainmenu #mainmenu-ul {
+  float: left; }
+  /* line 89, sass/style.scss */
+  #mainmenu #mainmenu-ul li {
+    display: block;
+    float: left; }
+    /* line 92, sass/style.scss */
+    #mainmenu #mainmenu-ul li a {
+      margin: 0px 20px;
+      display: block;
+      color: #333333;
+      text-decoration: none;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out; }
+    /* line 99, sass/style.scss */
+    #mainmenu #mainmenu-ul li a:hover {
+      color: black; }
+  /* line 103, sass/style.scss */
+  #mainmenu #mainmenu-ul li.current-menu-item a, #mainmenu #mainmenu-ul li.current_page_ancestor a {
+    color: black; }
+
+/* 
+* COMMENTS 
+*/
+/* line 115, sass/style.scss */
+#comments-wrap {
+  margin: 30px 0px 0px 0px; }
+  /* line 117, sass/style.scss */
+  #comments-wrap h3 {
+    margin: 0px 0px 15px 0px; }
+  /* line 121, sass/style.scss */
+  #comments-wrap #respond {
+    margin: 0px 0px 50px 0px; }
+  /* line 125, sass/style.scss */
+  #comments-wrap #commentform .form-div {
+    margin: 10px 0px 0px 0px; }
+  /* line 128, sass/style.scss */
+  #comments-wrap #commentform label {
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0px 0px 5px 0px;
+    font-size: 0.875em; }
+  /* line 135, sass/style.scss */
+  #comments-wrap #commentform input[type="text"], #comments-wrap #commentform input[type="email"] {
+    width: 100%;
+    max-width: 600px;
+    height: 30px;
+    line-height: 30px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 0.875em;
+    border: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px; }
+  /* line 146, sass/style.scss */
+  #comments-wrap #commentform textarea {
+    width: 100%;
+    max-width: 600px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 0.875em;
+    border: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    height: 130px; }
+  /* line 156, sass/style.scss */
+  #comments-wrap .comments {
+    margin: 0px; }
+    /* line 158, sass/style.scss */
+    #comments-wrap .comments .commentlist {
+      list-style: none; }
+      /* line 160, sass/style.scss */
+      #comments-wrap .comments .commentlist > li {
+        border-left: 2px solid #000;
+        padding: 0px 0px 0px 20px;
+        margin: 0px 0px 20px 0px; }
+        /* line 164, sass/style.scss */
+        #comments-wrap .comments .commentlist > li .children {
+          margin: 40px 0px 0px 0px;
+          border-left: 2px solid #808080;
+          padding: 0px 0px 0px 20px; }
+          /* line 168, sass/style.scss */
+          #comments-wrap .comments .commentlist > li .children li {
+            margin: 0px 0px 20px 0px; }
+      /* line 173, sass/style.scss */
+      #comments-wrap .comments .commentlist .avatar {
+        display: block;
+        margin: 0px 20px 0px 0px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        float: left; }
+      /* line 179, sass/style.scss */
+      #comments-wrap .comments .commentlist .says {
+        display: none; }
+      /* line 182, sass/style.scss */
+      #comments-wrap .comments .commentlist .fn {
+        font-style: normal; }
+      /* line 185, sass/style.scss */
+      #comments-wrap .comments .commentlist .comment-meta {
+        font-size: 0.75em;
+        margin: 0px 0px 10px 0px; }
+      /* line 189, sass/style.scss */
+      #comments-wrap .comments .commentlist .reply {
+        font-size: 0.75em;
+        display: inline-block; }
+        /* line 192, sass/style.scss */
+        #comments-wrap .comments .commentlist .reply a {
+          display: inline-block;
+          background: black;
+          padding: 5px 10px;
+          border: none;
+          color: #FFF;
+          text-decoration: none; }
+
+/* Other imports - SASS
+-------------------------------------------------------------------------------*/
+/* Media queries
+-------------------------------------------------------------------------------*/
+/* Print styles!
+-------------------------------------------------------------------------------*/

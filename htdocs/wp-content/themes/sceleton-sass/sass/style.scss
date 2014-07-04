@@ -1,0 +1,212 @@
+/*   
+Theme Name: The Sceleton theme
+Theme URI: http://tigerton.se
+Description: "bony framework of the body", a theme for quick and modern development!
+Author: Jonathan de Jong @ Tigerton 
+Author URI: http://tigerton.se
+Version: 2
+*/
+// Reset import
+@import 'reset';
+// compass import
+@import "compass";
+// Grid import
+@import 'grid';
+
+/* Mixins – SASS
+-------------------------------------------------------------------------------*/
+@mixin pie(){
+	behavior: url('PIE/PIE.htc');
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($seconds){
+	-webkit-transition: all $seconds ease-in-out;
+	-moz-transition: all $seconds ease-in-out;
+	-o-transition: all $seconds ease-in-out;
+	transition: all $seconds ease-in-out;
+}
+
+/* Variables – SASS
+-------------------------------------------------------------------------------*/
+$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$text-color: #333333;
+$link-color: #333333;
+$primary-color: #000;
+$secondary-color: #000;
+$font-size: 16;
+
+/* And here begins the Wordpress fun.
+-------------------------------------------------------------------------------*/
+/*
+* GENERIC STYLES
+*/
+body {
+	font-family: $font-stack;
+	color: $text-color;
+}
+/* 
+* TYPOGRAPHY 
+*/
+@import 'typography';
+
+/*
+* GENERAL
+*/
+.page-wrap {
+	max-width: 1200px; 
+	margin: 0px auto; 
+	padding:0px 10px;
+}
+#content{
+
+}
+.button{
+	
+}
+
+/* 
+* HEADER 
+*/
+#header{
+
+}
+#logo-wrap{
+	float: left;
+	#logo{
+		display: block;
+	}
+}
+/* Main menu */
+#mainmenu{
+	#mainmenu-ul{
+		float: left;
+		li{
+			display: block;
+			float: left;
+			a{
+				margin:0px 20px;
+				display: block;
+				color:$link-color;
+				text-decoration: none;
+				@include transition(0.4s);
+			}
+			a:hover{
+				color:$secondary-color;
+			}
+		}
+		li.current-menu-item a, li.current_page_ancestor a{
+			color:$secondary-color;
+		}
+	}
+}
+
+
+
+
+/* 
+* COMMENTS 
+*/
+#comments-wrap{ 
+	margin:30px 0px 0px 0px;
+	h3{
+		margin:0px 0px 15px 0px;
+	}
+	
+	#respond{ 
+		margin:0px 0px 50px 0px; 
+	}
+	#commentform{
+		.form-div{ 
+			margin:10px 0px 0px 0px;
+		}	
+		label{
+			display: block; 
+			float: left; 
+			width:100%; 
+			margin:0px 0px 5px 0px; 
+			font-size:(14/$font-size)*1em;
+		}
+		input[type="text"], input[type="email"]{
+			width:100%; 
+			max-width:600px; 
+			height:30px; 
+			line-height: 30px; 
+			font-family:$font-stack; 
+			font-size:(14/$font-size)*1em; 
+			border:none; 
+			-webkit-appearance: none;
+			@include border-radius(0px);
+		}
+		textarea{
+			width:100%; 
+			max-width: 600px;
+			font-family:$font-stack; 
+			font-size:(14/$font-size)*1em; 
+			border:none; 
+			@include border-radius(0px);
+			height:130px;
+		}
+	} 
+	.comments{ 
+		margin:0px;
+		.commentlist{
+			list-style: none; 
+			> li{
+				border-left:2px solid #000; 
+				padding:0px 0px 0px 20px; 
+				margin:0px 0px 20px 0px;
+				.children{
+					margin:40px 0px 0px 0px; 
+					border-left:2px solid #808080; 
+					padding:0px 0px 0px 20px;
+					li{
+						margin:0px 0px 20px 0px; 
+					}
+				}
+			}
+			.avatar{
+				display: block; 
+				margin:0px 20px 0px 0px; 
+				@include border-radius(50%);
+				float: left;
+			}
+			.says{
+				display: none;
+			}
+			.fn{
+				font-style: normal;
+			}
+			.comment-meta{
+				font-size:(12/$font-size)*1em;
+				margin:0px 0px 10px 0px;
+			}
+			.reply{
+				font-size:(12/$font-size)*1em;
+				display: inline-block;
+				a{
+					display: inline-block; 
+					background:$primary-color; 
+					padding:5px 10px; 
+					border:none; 
+					color:#FFF; 
+					text-decoration: none;
+				}
+			}
+		}
+	}	
+}
+
+
+/* Other imports - SASS
+-------------------------------------------------------------------------------*/
+
+
+/* Media queries
+-------------------------------------------------------------------------------*/
+@import 'media-queries';

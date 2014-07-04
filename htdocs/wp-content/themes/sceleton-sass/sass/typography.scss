@@ -1,0 +1,38 @@
+// $font-size is set in style.scss
+a{
+	font-size:(13/$font-size) * 1em; 
+	color:$link-color; 
+	text-decoration: none;
+}
+p{
+	font-size:(13/$font-size) * 1em;  
+	line-height:1.625em;
+	margin-bottom:1em;
+}
+h1{
+	font-size:(30/$font-size) * 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin:0px 0px 25px 0px;
+}
+h2{ 
+	font-size:(30/$font-size) * 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin:0px 0px 20px 0px;
+}
+h3{
+	font-size:(24/$font-size) * 1em;
+	font-weight: normal;
+}
+h4{
+	font-size:(18/$font-size) * 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin:0px 0px 15px 0px;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a, label a, blockquote a, small a, li a, q a{ 
+	color: inherit; 
+	font-size: inherit; 
+	text-decoration: inherit; 
+}
