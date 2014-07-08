@@ -104,7 +104,8 @@ input, select {
 
 /* line 3, sass/reset.scss */
 embed, img, object {
-  max-width: 100%; }
+  max-width: 100%;
+  max-height: 100%; }
 
 /* line 3, sass/reset.scss */
 button, input[type=email], input[type=tel], input[type=text], select, textarea {
@@ -204,53 +205,130 @@ a:link {
 /*
 * GENERIC STYLES
 */
-/* line 49, sass/style.scss */
+/* line 51, sass/style.scss */
 body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #333333; }
+  font-family: "belwe_lt_btlight", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333333;
+  background: url("images/lightpaperfibers.png") top left repeat; }
 
 /* 
 * TYPOGRAPHY 
 */
-/* line 2, sass/typography.scss */
+@font-face {
+  font-family: 'heroquestregular';
+  src: url("fonts/heroquest.eot");
+  src: url("fonts/heroquest.eot?#iefix") format("embedded-opentype"), url("fonts/heroquest.woff") format("woff"), url("fonts/heroquest.ttf") format("truetype"), url("fonts/heroquest.svg#heroquestregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'belwe_lt_btlight';
+  src: url("fonts/belwelight-webfont.eot");
+  src: url("fonts/belwelight-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/belwelight-webfont.woff") format("woff"), url("fonts/belwelight-webfont.ttf") format("truetype"), url("fonts/belwelight-webfont.svg#belwe_lt_btlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "hq";
+  src: url("fonts/hq.eot");
+  src: url("fonts/hq.eot?#iefix") format("embedded-opentype"), url("fonts/hq.woff") format("woff"), url("fonts/hq.ttf") format("truetype"), url("fonts/hq.svg#hq") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 38, sass/typography.scss */
+[data-icon]:before {
+  font-family: "hq" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 51, sass/typography.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "hq" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 64, sass/typography.scss */
+.icon-miniicons:before {
+  content: "b"; }
+
+/* line 67, sass/typography.scss */
+.icon-miniicons-1:before {
+  content: "c"; }
+
+/* line 70, sass/typography.scss */
+.icon-miniicons-2:before {
+  content: "d"; }
+
+/* line 73, sass/typography.scss */
+.icon-reload:before {
+  content: "a"; }
+
+/* line 76, sass/typography.scss */
+.icon-undo:before {
+  content: "e"; }
+
+/* line 79, sass/typography.scss */
+.icon-logout:before {
+  content: "f"; }
+
+/* line 82, sass/typography.scss */
+.icon-arrow:before {
+  content: "g"; }
+
+/* line 88, sass/typography.scss */
 a {
   font-size: 0.8125em;
   color: #333333;
   text-decoration: none; }
 
-/* line 7, sass/typography.scss */
+/* line 93, sass/typography.scss */
 p {
   font-size: 0.8125em;
   line-height: 1.625em;
   margin-bottom: 1em; }
 
-/* line 12, sass/typography.scss */
+/* line 98, sass/typography.scss */
 h1 {
-  font-size: 1.875em;
+  font-size: 2em;
   font-weight: normal;
   text-transform: uppercase;
-  margin: 0px 0px 25px 0px; }
+  margin: 0px 0px 25px 0px;
+  font-family: "heroquestregular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-/* line 18, sass/typography.scss */
+/* line 105, sass/typography.scss */
 h2 {
-  font-size: 1.875em;
+  font-size: 1.5em;
   font-weight: normal;
   text-transform: uppercase;
-  margin: 0px 0px 20px 0px; }
+  margin: 0px 0px 20px 0px;
+  font-family: "heroquestregular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-/* line 24, sass/typography.scss */
+/* line 112, sass/typography.scss */
 h3 {
-  font-size: 1.5em;
-  font-weight: normal; }
+  font-size: 1.125em;
+  font-weight: normal;
+  font-family: "heroquestregular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-/* line 28, sass/typography.scss */
+/* line 117, sass/typography.scss */
 h4 {
   font-size: 1.125em;
   font-weight: normal;
   text-transform: uppercase;
-  margin: 0px 0px 15px 0px; }
+  margin: 0px 0px 15px 0px;
+  font-family: "heroquestregular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
-/* line 34, sass/typography.scss */
+/* line 124, sass/typography.scss */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a, label a, blockquote a, small a, li a, q a {
   color: inherit;
   font-size: inherit;
@@ -259,152 +337,450 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a, label a, blockquote a, small a, li a, q
 /*
 * GENERAL
 */
-/* line 61, sass/style.scss */
+/* line 64, sass/style.scss */
 .page-wrap {
   max-width: 1200px;
   margin: 0px auto;
   padding: 0px 10px; }
 
+/* line 75, sass/style.scss */
+.mobile-element {
+  display: none; }
+
 /* 
 * HEADER 
 */
-/* line 79, sass/style.scss */
-#logo-wrap {
-  float: left; }
-  /* line 81, sass/style.scss */
-  #logo-wrap #logo {
-    display: block; }
+/* line 81, sass/style.scss */
+#header {
+  margin-bottom: 20px; }
+  /* line 82, sass/style.scss */
+  #header .upper-header {
+    background: #333333;
+    color: #FFF;
+    padding: 0px;
+    margin-bottom: 10px; }
+    /* line 87, sass/style.scss */
+    #header .upper-header .current-wizard {
+      margin-bottom: 0;
+      margin-top: 10px;
+      font-size: 0.875em;
+      text-transform: uppercase;
+      float: left; }
+  /* line 96, sass/style.scss */
+  #header .logo-wrap {
+    text-align: center; }
 
 /* Main menu */
-/* line 87, sass/style.scss */
-#mainmenu #mainmenu-ul {
-  float: left; }
-  /* line 89, sass/style.scss */
-  #mainmenu #mainmenu-ul li {
-    display: block;
+/* line 106, sass/style.scss */
+#mainmenu {
+  float: right; }
+  /* line 108, sass/style.scss */
+  #mainmenu .mainmenu-ul {
     float: left; }
-    /* line 92, sass/style.scss */
-    #mainmenu #mainmenu-ul li a {
-      margin: 0px 20px;
+    /* line 110, sass/style.scss */
+    #mainmenu .mainmenu-ul li {
       display: block;
-      color: #333333;
-      text-decoration: none;
-      -webkit-transition: all 0.4s ease-in-out;
-      -moz-transition: all 0.4s ease-in-out;
-      -o-transition: all 0.4s ease-in-out;
-      transition: all 0.4s ease-in-out; }
-    /* line 99, sass/style.scss */
-    #mainmenu #mainmenu-ul li a:hover {
-      color: black; }
-  /* line 103, sass/style.scss */
-  #mainmenu #mainmenu-ul li.current-menu-item a, #mainmenu #mainmenu-ul li.current_page_ancestor a {
-    color: black; }
-
-/* 
-* COMMENTS 
-*/
-/* line 115, sass/style.scss */
-#comments-wrap {
-  margin: 30px 0px 0px 0px; }
-  /* line 117, sass/style.scss */
-  #comments-wrap h3 {
-    margin: 0px 0px 15px 0px; }
-  /* line 121, sass/style.scss */
-  #comments-wrap #respond {
-    margin: 0px 0px 50px 0px; }
-  /* line 125, sass/style.scss */
-  #comments-wrap #commentform .form-div {
-    margin: 10px 0px 0px 0px; }
-  /* line 128, sass/style.scss */
-  #comments-wrap #commentform label {
-    display: block;
-    float: left;
-    width: 100%;
-    margin: 0px 0px 5px 0px;
-    font-size: 0.875em; }
-  /* line 135, sass/style.scss */
-  #comments-wrap #commentform input[type="text"], #comments-wrap #commentform input[type="email"] {
-    width: 100%;
-    max-width: 600px;
-    height: 30px;
-    line-height: 30px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 0.875em;
-    border: none;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px; }
-  /* line 146, sass/style.scss */
-  #comments-wrap #commentform textarea {
-    width: 100%;
-    max-width: 600px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 0.875em;
-    border: none;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
-    height: 130px; }
-  /* line 156, sass/style.scss */
-  #comments-wrap .comments {
-    margin: 0px; }
-    /* line 158, sass/style.scss */
-    #comments-wrap .comments .commentlist {
-      list-style: none; }
-      /* line 160, sass/style.scss */
-      #comments-wrap .comments .commentlist > li {
-        border-left: 2px solid #000;
-        padding: 0px 0px 0px 20px;
-        margin: 0px 0px 20px 0px; }
-        /* line 164, sass/style.scss */
-        #comments-wrap .comments .commentlist > li .children {
-          margin: 40px 0px 0px 0px;
-          border-left: 2px solid #808080;
-          padding: 0px 0px 0px 20px; }
-          /* line 168, sass/style.scss */
-          #comments-wrap .comments .commentlist > li .children li {
-            margin: 0px 0px 20px 0px; }
-      /* line 173, sass/style.scss */
-      #comments-wrap .comments .commentlist .avatar {
+      float: left; }
+      /* line 113, sass/style.scss */
+      #mainmenu .mainmenu-ul li a {
+        margin: 0px 5px;
         display: block;
-        margin: 0px 20px 0px 0px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%;
-        float: left; }
-      /* line 179, sass/style.scss */
-      #comments-wrap .comments .commentlist .says {
-        display: none; }
-      /* line 182, sass/style.scss */
-      #comments-wrap .comments .commentlist .fn {
-        font-style: normal; }
-      /* line 185, sass/style.scss */
-      #comments-wrap .comments .commentlist .comment-meta {
+        color: #FFF;
+        text-decoration: none;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
         font-size: 0.75em;
-        margin: 0px 0px 10px 0px; }
-      /* line 189, sass/style.scss */
-      #comments-wrap .comments .commentlist .reply {
-        font-size: 0.75em;
-        display: inline-block; }
-        /* line 192, sass/style.scss */
-        #comments-wrap .comments .commentlist .reply a {
+        padding: 10px 15px; }
+        /* line 121, sass/style.scss */
+        #mainmenu .mainmenu-ul li a:before {
+          font-size: 16px;
           display: inline-block;
-          background: black;
-          padding: 5px 10px;
-          border: none;
-          color: #FFF;
-          text-decoration: none; }
+          vertical-align: middle;
+          margin-top: -2px;
+          margin-right: 3px;
+          font-family: "hq" !important;
+          content: 'd';
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale; }
+      /* line 140, sass/style.scss */
+      #mainmenu .mainmenu-ul li.fight a:before {
+        content: 'd'; }
+      /* line 143, sass/style.scss */
+      #mainmenu .mainmenu-ul li.my a:before {
+        content: 'b'; }
+      /* line 146, sass/style.scss */
+      #mainmenu .mainmenu-ul li.all a:before {
+        content: 'c'; }
+      /* line 149, sass/style.scss */
+      #mainmenu .mainmenu-ul li a:hover {
+        background: #505050; }
+    /* line 153, sass/style.scss */
+    #mainmenu .mainmenu-ul li.current-menu-item a, #mainmenu .mainmenu-ul li.current_page_ancestor a {
+      background: #505050; }
 
-/* Other imports - SASS
--------------------------------------------------------------------------------*/
+/*
+* PAGE
+*/
+/* line 165, sass/style.scss */
+.article {
+  margin: 0px auto;
+  padding-bottom: 20px; }
+  /* line 168, sass/style.scss */
+  .article .page-title {
+    text-align: center; }
+
+/* line 172, sass/style.scss */
+.entry {
+  text-align: center; }
+
+/* LIST OF SCHOOLS AND SPELLS*/
+/* line 176, sass/style.scss */
+.schools {
+  text-align: center; }
+
+/* MY SPELLS*/
+/* line 181, sass/style.scss */
+#message {
+  text-align: center;
+  padding: 10px;
+  background: #effceb;
+  border: 1px solid #DFDFDF; }
+  /* line 186, sass/style.scss */
+  #message p {
+    font-size: 1.125em;
+    display: inline; }
+
+/* line 196, sass/style.scss */
+.my-magic .acf_relationship .relationship_search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  border: 1px solid #DFDFDF;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.2); }
+/* line 208, sass/style.scss */
+.my-magic .widefat {
+  width: 100%; }
+
+/* line 212, sass/style.scss */
+input[type="submit"], .button {
+  background: #333333;
+  border: none;
+  padding: 10px 15px;
+  color: #FFF;
+  font-family: inherit;
+  font-size: 0.75em;
+  text-transform: uppercase; }
+
+/*
+* QUESTAWAY
+*/
+/* line 225, sass/style.scss */
+.cards.columns {
+  margin-bottom: 40px; }
+
+/* line 228, sass/style.scss */
+.school-heading {
+  text-align: center; }
+
+/* line 234, sass/style.scss */
+.back-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #808080;
+  font-size: 1em;
+  font-family: "heroquestregular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+/* line 244, sass/style.scss */
+.button {
+  display: inline-block;
+  margin-bottom: 20px; }
+  /* line 247, sass/style.scss */
+  .button[data-icon]:before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 0px;
+    margin-right: 2px;
+    font-size: 16px; }
+
+/*
+* FLIP ANIMATION
+*/
+/* line 258, sass/style.scss */
+#f1_container {
+  position: relative;
+  margin: 0px auto;
+  height: 448px;
+  width: 100%;
+  z-index: 1; }
+
+/* line 265, sass/style.scss */
+#f1_container {
+  /*perspective*/
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000; }
+
+/* line 273, sass/style.scss */
+#f1_card {
+  width: 100%;
+  height: 100%;
+  /*transform-style*/
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  /*transition*/
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear; }
+
+/* line 288, sass/style.scss */
+.used #f1_container #f1_card {
+  /*transform*/
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+/* line 298, sass/style.scss */
+.face {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /*backface-visibility*/
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+/* line 310, sass/style.scss */
+.face.back {
+  display: block;
+  /*transform*/
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  box-sizing: border-box; }
+
+/*
+* COLUMNS
+*/
+/* line 325, sass/style.scss */
+.three-col {
+  float: left;
+  width: 31.66667%;
+  margin-right: 2.5%; }
+  /* line 327, sass/style.scss */
+  .three-col:nth-child(3n) {
+    margin-right: 0; }
+
+/*
+* FOOTER
+*/
+/* line 337, sass/style.scss */
+#footer {
+  background: #333333;
+  color: #FFF;
+  text-align: center;
+  margin-top: 20px; }
+  /* line 342, sass/style.scss */
+  #footer .back-to-top {
+    color: #FFF;
+    width: 100%;
+    padding: 10px;
+    display: block; }
+    /* line 347, sass/style.scss */
+    #footer .back-to-top[data-icon]:before {
+      display: inline-block;
+      margin-top: -2px;
+      vertical-align: middle;
+      margin-right: 4px; }
+
 /* Media queries
 -------------------------------------------------------------------------------*/
+@media all and (max-width: 800px) {
+  /* line 3, sass/media-queries.scss */
+  .three-col {
+    width: 48.75%;
+    margin-bottom: 2.5%; }
+    /* line 6, sass/media-queries.scss */
+    .three-col:nth-child(3n) {
+      margin-right: 2.5%; }
+    /* line 9, sass/media-queries.scss */
+    .three-col:nth-child(2n) {
+      margin-right: 0px; }
+
+  /* line 14, sass/media-queries.scss */
+  #f1_container {
+    height: 445px; } }
+@media all and (max-width: 768px) {
+  /* line 24, sass/media-queries.scss */
+  #f1_container {
+    height: 405px; }
+
+  /* line 27, sass/media-queries.scss */
+  .card {
+    max-height: 405px; }
+
+  /* line 31, sass/media-queries.scss */
+  .mobile-element {
+    display: block; }
+
+  /* line 35, sass/media-queries.scss */
+  #header .upper-header .current-wizard {
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px; }
+    /* line 41, sass/media-queries.scss */
+    #header .upper-header .current-wizard .wizard {
+      margin-right: 0px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      float: left;
+      margin-left: 10px; }
+    /* line 48, sass/media-queries.scss */
+    #header .upper-header .current-wizard .reset-cards {
+      float: right;
+      padding: 10px; }
+    /* line 52, sass/media-queries.scss */
+    #header .upper-header .current-wizard .logout-link {
+      float: right;
+      padding: 10px; }
+  /* line 57, sass/media-queries.scss */
+  #header .upper-header .page-wrap {
+    padding: 0px; }
+
+  /* line 62, sass/media-queries.scss */
+  #mainmenu {
+    width: 100%; }
+    /* line 64, sass/media-queries.scss */
+    #mainmenu .mainmenu-ul {
+      float: none;
+      width: 100%; }
+      /* line 67, sass/media-queries.scss */
+      #mainmenu .mainmenu-ul li {
+        width: 33.333%; }
+        /* line 69, sass/media-queries.scss */
+        #mainmenu .mainmenu-ul li a {
+          padding-left: 0px;
+          padding-right: 0px;
+          margin: 0px;
+          text-align: center; }
+
+  /* line 79, sass/media-queries.scss */
+  .button.reset-cards {
+    display: none; } }
+@media all and (max-width: 600px) {
+  /* line 88, sass/media-queries.scss */
+  #f1_container {
+    height: 415px; }
+
+  /* line 91, sass/media-queries.scss */
+  .card {
+    max-height: 415px; } }
+@media all and (max-width: 520px) {
+  /* line 100, sass/media-queries.scss */
+  #f1_container {
+    height: 380px; }
+
+  /* line 103, sass/media-queries.scss */
+  .card {
+    max-height: 380px; } }
+@media all and (max-width: 485px) {
+  /* line 112, sass/media-queries.scss */
+  #f1_container {
+    height: 350px; }
+
+  /* line 115, sass/media-queries.scss */
+  .card {
+    max-height: 350px; }
+
+  /* line 119, sass/media-queries.scss */
+  h1 {
+    font-size: 1.5em; }
+
+  /* line 122, sass/media-queries.scss */
+  h2 {
+    font-size: 1.125em;
+    margin-bottom: 5px; }
+
+  /* line 127, sass/media-queries.scss */
+  .cards.columns {
+    margin-bottom: 20px; } }
+@media all and (max-width: 460px) {
+  /* line 136, sass/media-queries.scss */
+  #f1_container {
+    height: 325px; }
+
+  /* line 139, sass/media-queries.scss */
+  .card {
+    max-height: 325px; }
+
+  /* line 145, sass/media-queries.scss */
+  .my-magic .acf_relationship .relationship_left, .my-magic .acf_relationship .relationship_right {
+    width: 100%; }
+    /* line 147, sass/media-queries.scss */
+    .my-magic .acf_relationship .relationship_left .relationship_list, .my-magic .acf_relationship .relationship_right .relationship_list {
+      margin-left: 0px; }
+  /* line 152, sass/media-queries.scss */
+  .my-magic .acf_relationship .relationship_right .relationship_list {
+    margin-top: 15px; } }
+@media all and (max-width: 400px) {
+  /* line 165, sass/media-queries.scss */
+  #f1_container {
+    height: 300px; }
+
+  /* line 168, sass/media-queries.scss */
+  .card {
+    max-height: 300px; } }
+@media all and (max-width: 400px) {
+  /* line 174, sass/media-queries.scss */
+  .three-col {
+    width: 100%;
+    margin-bottom: 2.5%; }
+    /* line 177, sass/media-queries.scss */
+    .three-col:nth-child(3n) {
+      margin-right: 0%; }
+    /* line 180, sass/media-queries.scss */
+    .three-col:nth-child(2n) {
+      margin-right: 0px; }
+
+  /* line 185, sass/media-queries.scss */
+  #f1_container {
+    height: 445px; }
+
+  /* line 188, sass/media-queries.scss */
+  .card {
+    max-height: 445px; } }
 /* Print styles!
 -------------------------------------------------------------------------------*/

@@ -1,14 +1,196 @@
-@media all and (max-width: 768px) {	
+@media all and (max-width: 800px) {	
+
+	.three-col{
+		width:48.75%;
+		margin-bottom:2.5%;
+		&:nth-child(3n){
+			margin-right:2.5%;
+		}
+		&:nth-child(2n){
+			margin-right:0px;
+		}
+	}
+	
+	#f1_container{
+		height:445px;
+	}
+
 }
 
-@media all and (max-width: 600px) {		
+
+
+@media all and (max-width: 768px) {
+
+	#f1_container{
+		height:405px;
+	}
+	.card{
+		max-height:405px;
+	}
+	
+	.mobile-element{
+		display: block;
+	}	
+	#header .upper-header{
+		.current-wizard{
+			width: 100%;
+			float: none;
+			text-align: center;
+			margin-bottom:0px;
+			margin-top:0px;
+			.wizard{
+				margin-right:0px;
+				margin-top:10px;
+				margin-bottom: 10px;
+				float: left;
+				margin-left:10px;
+			}
+			.reset-cards{
+				float: right;
+				padding:10px;
+			}
+			.logout-link{
+				float: right;
+				padding:10px;
+			}
+		}
+		.page-wrap{
+			padding:0px;
+		}
+	}
+	
+	#mainmenu{
+		width:100%;
+		.mainmenu-ul{
+			float: none;
+			width:100%;
+			li{
+				width:33.333%;
+				a{
+					padding-left:0px;
+					padding-right:0px;
+					margin:0px;
+					text-align: center;
+				}
+			}
+		}	
+	}
+	
+	.button.reset-cards{
+		display: none;
+	}
+		
 }
 
-@media all and (max-width: 480px) {	
+
+@media all and (max-width: 600px) {
+
+	#f1_container{
+		height:415px;
+	}	
+	.card{
+		max-height:415px;
+	}
+
 }
 
-@media all and (max-width: 320px) {	
+
+@media all and (max-width: 520px) {
+
+	#f1_container{
+		height:380px;
+	}	
+	.card{
+		max-height:380px;
+	}
+	
+	
+		
 }
+
+@media all and (max-width: 485px) {	
+	#f1_container{
+		height:350px;
+	}
+	.card{
+		max-height:350px;
+	}
+	
+	h1{
+		font-size:(24/$font-size) * 1em;
+	}
+	h2{
+		font-size:(18/$font-size) * 1em;
+		margin-bottom:5px;
+	}
+	
+	.cards.columns{
+		margin-bottom:20px;
+	}
+	
+}
+
+@media all and (max-width: 460px) {	
+
+
+	#f1_container{
+		height:325px;
+	}
+	.card{
+		max-height:325px;
+	}
+	
+	.my-magic{
+		.acf_relationship{
+			.relationship_left, .relationship_right{
+				width:100%;
+				.relationship_list{
+					margin-left:0px;
+				}
+			}
+			.relationship_right{
+				.relationship_list{
+					margin-top:15px;
+				}
+			}
+			
+		}
+	}
+	
+	
+}
+
+@media all and (max-width: 400px) {	
+
+	#f1_container{
+		height:300px;
+	}
+	.card{
+		max-height:300px;
+	}
+}
+
+@media all and (max-width: 400px) {	
+	.three-col{
+		width:100%;
+		margin-bottom:2.5%;
+		&:nth-child(3n){
+			margin-right:0%;
+		}
+		&:nth-child(2n){
+			margin-right:0px;
+		}
+	}
+	
+	#f1_container{
+		height:445px;
+	}
+	.card{
+		max-height:445px;
+	}
+	
+}
+
 
 /* Print styles!
 -------------------------------------------------------------------------------*/
